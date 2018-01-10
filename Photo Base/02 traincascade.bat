@@ -1,0 +1,1 @@
+opencv_traincascade.exe -data cascades -vec vector\vector.vec -bg n\bg.txt -numPos 440  -numNeg 3367 -numStages 17 -featureType LBP -w 24 -h 24 
