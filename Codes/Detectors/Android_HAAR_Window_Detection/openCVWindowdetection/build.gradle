@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    sourceSets.main {
+
+        jni.srcDirs = [] //disable automatic ndk-build call
+        jniLibs.srcDir 'src/main/jniLibs'
+    }
+
+    defaultConfig {
+        applicationId 'org.opencv.samples.windowdetect'
+        minSdkVersion 8
+        targetSdkVersion 29
+
+        ndk {
+            moduleName "libdetection_based_tracker"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':openCVLibrary343')
+}
