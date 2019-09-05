@@ -10,7 +10,7 @@ Folder "Codes" contain codes for each detector and some application helpful for 
 -LBP Cascade Classifier in C++
 -Harr Cascade Classifier in Android
 -Application for darknet that helps in training and testing models with darknet
--Cropping application which crop objects selected in app LabelIMG
+-Cropping application which crop objects labeled in BBox Label Tool
 
 Folder "Executable" contain executable files of the above applications
 Folder "Photo Base" contain all files which I used to create Detectors. 
