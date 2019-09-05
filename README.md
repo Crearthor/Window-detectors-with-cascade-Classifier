@@ -1,4 +1,4 @@
-# Window-detectors-with-cascade-Classifier
+# Windows Detectors
 Here u can find Windows Detectors made in C++ and Android. Programs are using library OpenCV version 3.4.3.  Additionally it contain image base used for creation detection models.
 
 In Folder Cascade Classifiers are  two XML files. These are Haar Casscade Classifer and LBP Classifier.
