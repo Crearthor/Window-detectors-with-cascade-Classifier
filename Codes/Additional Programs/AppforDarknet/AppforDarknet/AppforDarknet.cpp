@@ -11,8 +11,8 @@ int main()
 	int wyborFormatu,wyborAkcji;
 	string str, model;
 	const char  *command;
-	cout << "W jakim celu chcesz uzyc aplikacji darknet:" << endl;
-	cout << "1.trening" << endl << "2.Testowanie" << endl;
+	cout << "What would you like to do:" << endl;
+	cout << "1.Train model" << endl << "2.Test model" << endl;
 	cin >> wyborAkcji;
 	if (wyborAkcji == 1) {
 		str = "darknet detector train trening/obj.data trening/yolo-obj.cfg darknet53.conv.74";
@@ -22,12 +22,12 @@ int main()
 	else
 	{
 
-		cout << "Jakiego formatu chcesz dokonaæ detekcji:" << endl;
+		cout << "Which source would you like to perform detection: " << endl;
 
-		cout << "1.Zdjecie" << endl << "2.Film" << endl << "3.Kamera" << endl;
+		cout << "1.Image" << endl << "2.Video" << endl << "3.Camera" << endl;
 		cin >> wyborFormatu;
 		if (wyborFormatu != 3) {
-			cout << "Podaj nazwe pliku ";
+			cout << "Write file name: ";
 			cin >> str;
 		}
 
@@ -35,21 +35,21 @@ int main()
 		{
 		case 1:
 		{
-			str = "darknet detect trening/yolo-obj.cfg trening/yolo-obj.weights " + str;
+			str = "darknet detect trening/yolo-obj.cfg training/yolo-obj.weights " + str;
 			command = str.c_str();
 			system(command);
 			break;
 		}
 		case 2:
 		{
-			str = "darknet detector demo trening/obj.data trening/yolo-obj.cfg trening/yolo-obj.weights "+  str;
+			str = "darknet detector demo trening/obj.data trening/yolo-obj.cfg training/yolo-obj.weights "+  str;
 			command = str.c_str();
 			system(command);
 			break;
 		}
 		case 3:
 		{
-			system("darknet detector demo trening/obj.data trening/yolo-obj.cfg trening/yolo-obj.weights");
+			system("darknet detector demo trening/obj.data trening/yolo-obj.cfg training/yolo-obj.weights");
 			break;
 		}
 		}
