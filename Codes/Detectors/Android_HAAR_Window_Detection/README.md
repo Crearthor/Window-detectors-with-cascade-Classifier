@@ -1,0 +1,1 @@
+This is reworked sample of face detection from opencv to window detection. It was reworked in Android Studio so you should be able to make from this project your own custom detection for Android devices in Android Studio.
