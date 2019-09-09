@@ -14,3 +14,5 @@ Folder "Codes" contain codes for each detector and some application helpful for 
 
 Folder "Executable" contain executable files of the above applications
 Folder "Photo Base" contain all files which I used to create Detectors. 
+
+<b>In some folders are packed <i>opencv_world343d.dll</i> and <i>yolo-obj.weights</i> files. You must unpack them to make everything works.</b>
