@@ -15,7 +15,7 @@ int main()
 	cout << "1.Train model" << endl << "2.Test model" << endl;
 	cin >> wyborAkcji;
 	if (wyborAkcji == 1) {
-		str = "darknet detector train trening/obj.data trening/yolo-obj.cfg darknet53.conv.74";
+		str = "darknet detector train training/obj.data training/yolo-obj.cfg darknet53.conv.74";
 		command = str.c_str();
 		system(command);
 	}
@@ -42,14 +42,14 @@ int main()
 		}
 		case 2:
 		{
-			str = "darknet detector demo trening/obj.data trening/yolo-obj.cfg training/yolo-obj.weights "+  str;
+			str = "darknet detector demo trening/obj.data training/yolo-obj.cfg training/yolo-obj.weights "+  str;
 			command = str.c_str();
 			system(command);
 			break;
 		}
 		case 3:
 		{
-			system("darknet detector demo trening/obj.data trening/yolo-obj.cfg training/yolo-obj.weights");
+			system("darknet detector demo trening/obj.data training/yolo-obj.cfg training/yolo-obj.weights");
 			break;
 		}
 		}
